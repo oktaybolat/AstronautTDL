@@ -59,6 +59,7 @@ p {
     font-size: 1.2rem;
     color: var(--secondaryColor);
     padding-left: 1rem;
+    width: 100%;
 }
 
 .backgroungImg{
@@ -67,7 +68,7 @@ p {
     justify-content: center;
     background-repeat: no-repeat;
     align-items: center;
-    border: 2px solid #EA1717;
+    /*border: 2px solid #EA1717;*/
     width: 100%;
     height: 100vh;
     background-size: cover;
@@ -86,7 +87,7 @@ p {
 
     }
 
-    .Today , .Upcoming{
+    .addNew , .Upcoming{
         
         display: flex;
         width: 90%;
@@ -106,8 +107,14 @@ p {
         list-style: none;
 
     }
+
     li{
         display: flex;
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--secondaryColor);
+        justify-content: space-around;
+
+
        
     }
     .radio , .addTask{
@@ -116,7 +123,7 @@ p {
         align-items: center;
         flex-direction: column;
     }
-    input[type=text]{
+    .addTask input[type=text]{
         border: #79799A 1px solid;
         padding: 1rem;
         width: 100%;
@@ -124,13 +131,18 @@ p {
         min-height: 5.6rem;
         font-size: 1.6rem;
         font-family: 'Varela Round', sans-serif;
+
     }
     .icon{/*need to fix*/
         /*border: 2px solid #EA1717;*/
         display: flex;
-        
-        /*position: relative;
-        left: 30%;*/
+   
+    }
+    .icon img{
+        padding: 0.5rem;
+    }
+    .icon img:first-child{
+        margin-right: 1rem;
     }
     button{
         background-color: #8532C8;
@@ -147,9 +159,11 @@ p {
 button img{
     margin-right: 1rem;
 }
+footer {
+    background-color: var(--footerColor);
+    
+}
     .footerIcons{
-        background-color: var(--footerColor);
-        border: 2px solid #EA1717;
         height: 5.4rem;
         width: 37.5rem;
         display: flex;
@@ -157,9 +171,7 @@ button img{
         align-items: center;
         padding-left: 3%;
         padding-right: 3%;
-
-
-
+        margin: 0 auto;
     }
 
     /*.Upcoming{

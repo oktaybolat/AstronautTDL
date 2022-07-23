@@ -19,11 +19,11 @@
                 <h4>It's not a rocket science</h4>
             </header>
          <main>
-            <section class="Today">
+            <section class="addNew">
                 <h3>Add New ToDo</h3><!--make as a list-->
                 <div class="addTask">
-                    <input type="text" placeholder="e.g walk on the moon" > 
-                    <button><img src="./assets/plusIcon.svg">Add new task</button>
+                    <input type="text" placeholder="e.g walk on the moon" id="js-ToDo-input"> 
+                    <button onclick="addNewFunction()"><img src="./assets/plusIcon.svg">Add new task</button>
                 </div>
                 <!--<img class="line" src="./assets/grayLine.svg">
                 <div class="radio">
@@ -48,9 +48,10 @@
             </section>
             <section class="Upcoming"><!--make is as a list-->
                 <h3>My ToDo List</h3>
-                <ul class="toDoListItems">
-                    <li><input type="radio"> 
-                        <p>feeding the turtles</p>
+                <ul class="toDoListItems" id="js-list-input">
+                    <li>
+                        <input type="radio">
+                        <input type="text" value="Feeding the turtles" disabled> 
                         <div class="icon">
                             <img  src="./assets/archiv.svg" alt="archiv">
                             <img  src="./assets/lightOrangeBin.svg" alt="delete">
@@ -58,7 +59,7 @@
                     </li>
                     <li>
                         <input type="radio"> 
-                        <p>Look at a Mars</p>
+                        <input type="text" value="Look at a Mars" disabled> 
                         <div class="icon">
                             <img  src="./assets/editIconGray.svg" alt="edit">
                             <img  src="./assets/lightOrangeBin.svg" alt="delete">
@@ -66,7 +67,7 @@
                     </li>
                     <li>
                         <input type="radio"> 
-                        <p>Look at a Mars</p>
+                        <input type="text" value="Look at a Mars" disabled>
                          <div class="icon">
                              <img  src="./assets/editIconGray.svg" alt="edit">
                              <img  src="./assets/lightOrangeBin.svg" alt="delete">
@@ -74,7 +75,7 @@
                     </li>
                     <li>
                         <input type="radio"> 
-                        <p>Practice moonwalk</p>
+                        <input type="text" value="Practice moonwalk" disabled>
                         <div class="icon">
                             <img  src="./assets/editIconGray.svg" alt="edit">
                             <img  src="./assets/lightOrangeBin.svg" alt="delete">
@@ -107,19 +108,23 @@
                         <img  src="./assets/lightOrangeBin.svg" alt="delete">
                     </div>
                 </div>-->
-                <img class="line" src="./assets/grayLine.svg">
-                    <button><img src="./assets/plusIcon.svg">Add new task</button>
+               
+                   <!-- <button><img src="./assets/plusIcon.svg">Add new task</button>-->
 
             </section>
          </main>
         </div>
         </div>
+        <script src="./ToDoList.js"></script>
     </body>
-    <footer class="footerIcons">
-        <img src="./assets/listIcon.svg" alt="list">
-        <img src="./assets/searchIcon.svg" alt="search">
-        <img src="./assets/filterIcon.svg" alt="filter">
-        <img src="./assets/calenderIcon.svg" alt="calender">
-        <img src="./assets/shareIcon.svg" alt="share">
+    <footer >
+        <div class="footerIcons">
+            <img src="./assets/listIcon.svg" alt="list">
+            <img src="./assets/searchIcon.svg" alt="search">
+            <img src="./assets/filterIcon.svg" alt="filter">
+            <img src="./assets/calenderIcon.svg" alt="calender">
+            <img src="./assets/shareIcon.svg" alt="share">
+        </div>
      </footer>
+     
 </html>
