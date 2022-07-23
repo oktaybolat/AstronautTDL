@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Varela+Round&display=swap"');
+* {
+    border: none;
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --bottonColor: #8532C8;
+    --primaryColorHover:#EA1717;
+    --secondaryColor: #000;
+    --terciaryColor: #fff;
+    --footerColor: #79799A;
+    --boxShadow: 0px 4px 20px rgba(40, 33, 26, 0.15);
+    font-family: 'Righteous', cursive;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 62.5%;
+}
+body {
+    background: ; /*background img*/
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+} 
+
+h1 {
+    font-size: 4rem;
+    font-family: 'Righteous', cursive;
+}
+
+h2 {
+    font-size: 3.2rem;
+    
+}
+
+h3 {
+    font-size: 2.4rem;
+    font-family: 'Righteous', cursive;
+    margin-bottom: 1.2rem;
+    
+} 
+
+h4 {
+    font-size: 2rem;
+} 
+
+h5 {
+    font-size: 1.6rem;
+} 
+
+a {
+    font-size: 1.2rem;
+    color: var(--primaryColor);
+}
+
+p {
+    font-size: 1.2rem;
+    color: var(--secondaryColor);
+    padding-left: 1rem;
+}
+
+.backgroungImg{
+    display: flex;
+    background-image: url(./assets/wallpaperflare.com_wallpaper.jpg);
+    justify-content: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    border: 2px solid #EA1717;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    }
+    .columBox{
+        display: flex;
+        flex-direction: column;
+    }
+    .titleList{
+        color: var(--terciaryColor);
+        /*border: 2px solid #EA1717;*/
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        
+
+    }
+
+    .Today , .Upcoming{
+        
+        display: flex;
+        width: 90%;
+        height: auto;
+        background-color: var(--terciaryColor);
+        border-radius: 16px;
+        margin: 2rem;
+        flex-direction: column;
+        padding: 2.4rem;
+        /*height: 32rem;
+        width: 34.3rem;
+        left: 1.6rem;
+        top: 12.3rem;*/
+        
+    }
+    .toDoListItems{
+        list-style: none;
+
+    }
+    li{
+        display: flex;
+       
+    }
+    .radio , .addTask{
+       /* border: 2px solid #EA1717;*/
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    input[type=text]{
+        border: #79799A 1px solid;
+        padding: 1rem;
+        width: 100%;
+        border-radius: 1.6rem;
+        min-height: 5.6rem;
+        font-size: 1.6rem;
+        font-family: 'Varela Round', sans-serif;
+    }
+    .icon{/*need to fix*/
+        /*border: 2px solid #EA1717;*/
+        display: flex;
+        
+        /*position: relative;
+        left: 30%;*/
+    }
+    button{
+        background-color: #8532C8;
+        border-radius: 1.6rem;
+        width: 29.5rem;
+        height: 5.6rem;
+        /*border: 2px solid #EA1717;*/
+        color: var(--terciaryColor);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1.8rem 0;
+    }
+button img{
+    margin-right: 1rem;
+}
+    .footerIcons{
+        background-color: var(--footerColor);
+        border: 2px solid #EA1717;
+        height: 5.4rem;
+        width: 37.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 3%;
+        padding-right: 3%;
+
+
+
+    }
+
+    /*.Upcoming{
+        
+        background-color: #fff;
+        border-radius: 16px;
+
+    }*/
+@media only screen and (min-width: 768px) {
+
+    h1 {
+        font-size: 4.8rem;
+    }
+    
+    h2 {
+        font-size: 4rem;
+    }
+    
+    h3 {
+        font-size: 3.2rem;
+    } 
+    
+    h4 {
+        font-size: 2.4rem;
+    } 
+    
+    h5 {
+        font-size: 2rem;
+    } 
+
+    p, a {
+        font-size: 1.6rem;
+    }
+
+    section {
+        padding: 6rem 0;
+    }
+
+    .container{
+        width: calc(100vw - 5rem);
+    }
+
+    
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .container{
+        width: 1100px;
+    }
+    
+}
