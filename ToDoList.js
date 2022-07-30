@@ -1,6 +1,8 @@
 
 // Here is our list of ToDos that have been entered into our list
 let toDoItems = [];
+let ToDolistItems = document.querySelector('.toDoListItems');
+let 
 
 const submitButton = document.getElementById('js-adding-todo')
 submitButton.addEventListener('click', addNewFunction)
@@ -10,10 +12,13 @@ function addNewFunction(){
   // get data from "myinput" text box
   const input = document.getElementById("js-ToDo-input").value;
   
-  const newlistItem = document.getElementById('js-list-input');
-  const newItem = document.createElement('li')
+  const newListItem = document.getElementById('js-list');
+  
+  const newItem = input.createElement('li')
   newItem.innerHTML = input
-  newlistItem.appendChild(newItem);
+  newListItem.appendChild(newItem);
+
+  
   
   //get data from ul
   // Now we are trying to build a function? to be able to always push text to list.
