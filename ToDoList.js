@@ -15,7 +15,7 @@ function addNewFunction(){
   const newRadio = '<input type="radio"></input>';
   const newIconsDiv = document.createElement('div');
   newIconsDiv.className = 'icon'
-  const newIcons = '<img  src="./assets/editIconGray.svg" alt="archiv"><img  src="./assets/lightOrangeBin.svg" alt="delete">'
+  const newIcons = '<img  src="./assets/editIcon.svg" alt="edit" class="editButton"><img  src="./assets/OrangeBin.svg" alt="delete" class="deleteButton">'
   newIconsDiv.innerHTML = newIcons;  
 
 
@@ -39,10 +39,29 @@ function addNewFunction(){
   
   //delete input text
   userInput.value = '';
+  deleteTaskFunction()
+ 
 
+  }
 
+   //creat function with onclick event for the edit/delete/archiv
+  //click on delet and the task is remove
+  const deleteFunction = (event) => {
+   event.target.parentElement.parentElement.remove()  
+  }
+ 
+  const deleteTaskFunction = () => {
+    const deleteTask = document.getElementsByClassName('deleteButton');
+  
+  console.log(deleteTask)
+  for (let i = 0; i<deleteTask.length; i++){
+    deleteTask[i].addEventListener('click', deleteFunction); 
 
-
+  }
+  
+  }
+  deleteTaskFunction()
+    
   
   //get data from ul
   // Now we are trying to build a function? to be able to always push text to list.
@@ -63,7 +82,7 @@ function addNewFunction(){
   
 
 
-}
+
 
 
 
