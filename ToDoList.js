@@ -40,8 +40,8 @@ function addNewFunction(){
   //delete input text
   userInput.value = '';
   deleteTaskFunction()
- 
-
+  editTaskFunction();
+  
   }
 
    //creat function with onclick event for the edit/delete/archiv
@@ -53,29 +53,31 @@ function addNewFunction(){
   const deleteTaskFunction = () => {
     const deleteTask = document.getElementsByClassName('deleteButton');
   
-  console.log(deleteTask)
   for (let i = 0; i<deleteTask.length; i++){
     deleteTask[i].addEventListener('click', deleteFunction); 
-
-  }
-  
+    }
   }
   deleteTaskFunction()
     
+//Allowing our ToDo tasks to be edited
+//User needs to click on the task to edit, make the changes and save.
+const disableEdit = (event) => {
+  event.target.disabled = true;
+};
+
+const editFunction = (event) => {
+  event.target.parentElement.parentElement.children[1].disabled = false;
+  event.target.parentElement.parentElement.children[1].addEventListener('change', disableEdit);
+}
+
+const editTaskFunction = () => {
+  const editTask = document.getElementsByClassName('editButton');
   
-  //get data from ul
-  // Now we are trying to build a function? to be able to always push text to list.
-  // we declare a variable called todo (this what we will send)
-  
-  
- 
-
-
-  //toDoItems.push(todo)
-  //push new data into list
-
-  // push radio, edit and delete buttons into the list
-
+  for (let i = 0; i < editTask.length; i++) {
+    editTask[i].addEventListener('click', editFunction);
+  }
+  };
+editTaskFunction();
 
 
 
