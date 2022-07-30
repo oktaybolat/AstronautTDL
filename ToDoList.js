@@ -1,24 +1,48 @@
 
-// Here is our list of ToDos that have been entered into our list
+// Global variables
+
 let toDoItems = [];
 let ToDolistItems = document.querySelector('.toDoListItems');
-let 
 
-const submitButton = document.getElementById('js-adding-todo')
-submitButton.addEventListener('click', addNewFunction)
+
+// Submit Button
+const submitButton = document.getElementById('js-adding-todo');
+submitButton.addEventListener('click', addNewFunction);
+
 // function to add  new item and necessary buttons into the list
 function addNewFunction(){
-    
-  // get data from "myinput" text box
-  const input = document.getElementById("js-ToDo-input").value;
-  
-  const newListItem = document.getElementById('js-list');
-  
-  const newItem = input.createElement('li')
-  newItem.innerHTML = input
-  newListItem.appendChild(newItem);
 
+  const newRadio = '<input type="radio"></input>';
+  const newIconsDiv = document.createElement('div');
+  newIconsDiv.className = 'icon'
+  const newIcons = '<img  src="./assets/editIconGray.svg" alt="archiv"><img  src="./assets/lightOrangeBin.svg" alt="delete">'
+  newIconsDiv.innerHTML = newIcons;  
+
+
+  // get data from "myinput" text box
+  const userInput = document.getElementById("js-ToDo-input");
   
+  // Build list element
+  const ulItem = document.getElementById('js-list');
+  const newLiItem = document.createElement('li');
+  ulItem.appendChild(newLiItem);
+  newLiItem.innerHTML = newRadio;
+  console.log(newLiItem);
+
+  const newInput = document.createElement('input');
+  newInput.type = 'text';
+  newInput.value = userInput.value;
+  newInput.disabled = true;
+
+  newLiItem.appendChild(newInput);
+  newLiItem.appendChild(newIconsDiv);
+  
+  //delete input text
+  userInput.value = '';
+
+
+
+
   
   //get data from ul
   // Now we are trying to build a function? to be able to always push text to list.
