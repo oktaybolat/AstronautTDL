@@ -129,6 +129,9 @@ p {
         font-family: 'Varela Round', sans-serif;
 
     }
+    .done input[type="text"] {
+        text-decoration: line-through;
+    }
     .icon{/*need to fix*/
         /*border: 2px solid #EA1717;*/
         display: flex;
